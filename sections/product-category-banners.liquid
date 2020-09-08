@@ -1,0 +1,120 @@
+<section class="product-category">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title text-center">
+            <h2>Product Category</h2>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="category-box">
+            <a href="{{section.settings.left_url}}">
+              <img src="{{section.settings.left_image |  img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.left_header}}</h3>
+                <p>{{section.settings.left_body}}</p>
+              </div>
+            </a>  
+          </div>
+          <div class="category-box">
+            <a href="{{section.settings.right_url}}">
+              <img src="{{section.settings.right_image |  img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.right_header}}</h3>
+                <p>{{section.settings.right_body}}</p>
+              </div>
+            </a>  
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="category-box">
+            <a href="{{section.settings.bottom_url}}">
+              <img src="{{section.settings.bottom_image |  img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.bottom_header}}</h3>
+                <p>{{section.settings.bottom_body}}</p>
+              </div>
+            </a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% schema %}
+
+{
+      "name": "left section",
+    "settings": [
+            {
+                "type":"text",
+                "id":"left_header",
+                "default": "dresses",
+                "label":"Left header"
+            },
+            {
+                "type":"text",
+                "id":"left_body",
+                "default":"dresses",
+                "label":"Left Body"
+            },
+            {
+                "type":"image_picker",
+                "id":"left_image",
+                "label":"left_image"
+            },
+            {
+              "type":"url",
+                "id":"left_url",
+                "label":"left_link"
+            },
+             {
+                "type":"text",
+                "id":"right_header",
+                "default": "dresses",
+                "label":"Right header"
+            },
+            {
+                "type":"text",
+                "id":"right_body",
+                "default":"dresses",
+                "label":"Right Body"
+            },
+            {
+                "type":"image_picker",
+                "id":"right_image",
+                "label":"right_image"
+            },
+            {
+              "type":"url",
+                "id":"right_url",
+                "label":"right_link"
+            },
+             {
+                "type":"text",
+                "id":"bottom_header",
+                "default": "jeans",
+                "label":"Bottom header"
+            },
+            {
+                "type":"text",
+                "id":"bottom_body",
+                "default":"jeans",
+                "label":"Bottom Body"
+            },
+            {
+                "type":"image_picker",
+                "id":"bottom_image",
+                "label":"bottom_image"
+            },
+            {
+              "type":"url",
+                "id":"bottom_url",
+                "label":"bottom_link"
+            }
+                ]
+     
+}
+
+  {% endschema %}

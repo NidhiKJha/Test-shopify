@@ -1,0 +1,97 @@
+<section class="collection-fingerlakes-template">
+    <div class="container" >
+        <div class="row margin-bottom-20-desktop">
+            <div class="col-12 col-xl-8">
+                <div class="collection_banner_wrapper">
+                    {%if section.settings.collection_banner_image_mobile %}
+                        <img src="{{section.settings.collection_banner_image_mobile  | img_url: 'master'}}" alt="Banner Image" class="d-block d-md-none">
+                    {%endif%}
+                    {%if section.settings.collection_banner_image_ipad %}
+                        <img src="{{section.settings.collection_banner_image_ipad | img_url: 'master'}}}" alt="Banner Image" class="d-none d-md-block d-xl-none">
+                    {%endif%}
+                    {% if section.settings.collection_banner_image_desktop %}
+                        <img src="{{section.settings.collection_banner_image_desktop | img_url: 'master'}}}" alt="Banner Image" class="d-none d-xl-block">
+                    {%endif%}
+                </div>
+            </div>
+            <div class="col-12 col-xl-4">
+                <div class="register-now-wrapper">
+                    <h1>{{collection.title}}</h1>
+                    <hr>
+                    <div class="schedule-wrapper">
+                        {% for block in section.blocks %}
+                            <div class="register-now-content-wrapper-date margin-top-bottom-25">
+                                {% if block.settings.logo_image %}
+                                    <img src="{{block.settings.logo_image | img_url: 'master'}}" alt="logo">
+                                {%endif%}
+                                {% if block.settings.title %}
+                                    <span>{{block.settings.title}}</span>
+                                {%endif%}
+                            </div>
+                        {%endfor%}
+                        <div class="collection_register_now">
+                            <button type="button" data-toggle="modal" data-target="#exampleModal" class="js-register-now-details-cta">Register now</button>
+                            <!-- class="js-register-now-details-cta" -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-8 order-2 order-xl-1">
+                <div class="collection_description_wrapper">
+                    {{collection.description}}
+                </div>
+            </div>
+            <div class="col-12 col-xl-4 order-1 order-xl-2">
+                <div class="contact-us-wrapper-collection-details">
+                    <p>Have a Question, Need Help?</p>
+                    <hr>
+                    <a href="/pages/contact" class="text-uppercase text-center">
+                        <div class="contact-us-text">contact us</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% schema %}
+    {
+    "name": "Fingerlakes",
+    "settings": [
+            {
+                "type":"image_picker",
+                "id":"collection_banner_image_desktop",
+                "label":"Banner Desktop"
+            },
+            {
+                "type":"image_picker",
+                "id":"collection_banner_image_ipad",
+                "label":"Banner Ipad"
+            },
+            {
+                "type":"image_picker",
+                "id":"collection_banner_image_mobile",
+                "label":"Banner Mobile"
+            }
+                ],
+        "blocks": [
+        {
+          "type": "logo",
+          "name": "Carousel",
+          "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Register now content"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo_image",
+              "label": "Register now logo"
+            }
+          ]
+        }
+      ] 
+    }
+{% endschema %}
