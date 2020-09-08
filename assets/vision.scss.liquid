@@ -20,6 +20,14 @@
     src: url("https://cdn.shopify.com/s/files/1/0389/3323/3795/files/Avenir.ttc?v=1591610625") format("opentype");
 }
 
+    .mission-content-row {
+    display: flex;
+    overflow: hidden;
+    border-bottom: 2px solid #d3d3d3;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    }
 
   .mission-content {
             font-family: AvenirBook;
@@ -33,7 +41,6 @@
         .our-mission-category-box {
             height: 600px;
             margin-left: 100px;
-            margin-right: 50px;
         }
 
         .our-vision-img-responsive {
@@ -42,18 +49,20 @@
         }
 
         .our-mission-col-xs-3 {
-            width: 30%;
-            float: left;
-            padding: 0 15px;
-            height: 600px !important;
-            margin-left: 120px;
+            width: 25%;
+            margin-left: 30px;
+            padding: 0 5px;
+            padding-top: 20px !important;
+            overflow: hidden;
         }
 
         .our-mission-col-xs-9 {
-            width: 50%;
+            width: 100%;
+            padding: 0 5px;
+            padding-top: 20px !important;
             float: right;
-            margin-left: 0px;
             text-align: left;
+            margin-left:150px;
         }
 
         #image-text-box {
@@ -63,14 +72,15 @@
         .img-fluid {
             position: absolute;
             z-index: 0;
+            width:400px;
         }
 
         .hello-text {
             position: absolute;
             z-index: 1;
             left:-1px;
-            margin-left:80px;
-            margin-top:80px;
+            margin-left:40px;
+            margin-top:40px;
             background: none;
             border: none;
             cursor: pointer;
@@ -83,3 +93,15 @@
         #text-2 {
             top: 250px;
         }
+
+        @media screen and (max-width: 800px) {
+    .our-mission-col-xs-9 {
+        display: none;
+    }
+    .our-mission-col-xs-3 {
+        width: 100%;
+    }
+    .comment_one img {
+        width: 100%;
+    }
+}
