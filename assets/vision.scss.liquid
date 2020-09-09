@@ -1,9 +1,9 @@
 @font-face {
-    font-family: "DomaineDisp-Regular";
+    font-family: "DomaineDispRegular";
     src: url("https://cdn.shopify.com/s/files/1/0389/3323/3795/files/DomaineDisp-Regular.otf?v=1591610645") format("opentype");
 }
 @font-face {  
-    font-family: "DomaineDisp-Semibold";
+    font-family: "DomaineDispSemibold";
     src: url("https://cdn.shopify.com/s/files/1/0389/3323/3795/files/DomaineDisp-Semibold.otf") format("opentype");
 }
 /* Avenir Font Family */
@@ -20,54 +20,26 @@
     src: url("https://cdn.shopify.com/s/files/1/0389/3323/3795/files/Avenir.ttc?v=1591610625") format("opentype");
 }
 
-    .mission-content-row {
-    display: flex;
-    overflow: hidden;
-    border-bottom: 2px solid #d3d3d3;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    }
+
 
   .mission-content {
             font-family: AvenirBook;
             color: black;
             opacity: 100%;
-            font-size: 18px;
+            font-size: 16px;
             text-align: left;
-            line-height: 28px;
+            line-height: 24px;
         }
 
         .mission-box {
             height: 600px;
-            margin-left: 100px;
-        }
-
-        .our-vision-img-responsive {
-            z-index: -1;
-            height: 600px !important;
-        }
-
-        .our-mission-col-xs-3 {
-            width: 25%;
-            margin-left: 30px;
-            padding: 0 5px;
-            padding-top: 20px !important;
-            overflow: hidden;
-        }
-
-        .our-mission-col-xs-9 {
-            width: 100%;
-            padding: 0 5px;
-            padding-top: 20px !important;
-            float: right;
-            text-align: left;
-            margin-left:150px;
+            margin-top:20px;
         }
 
         .active{
-            font-weight: bold;
-            font-size:20px;
+            font-family: DomaineDispSemibold;
+            font-size:32px;
+            font-weight:bold;
         }
         .para-hidden{
             display:none;
@@ -77,16 +49,12 @@
             position: relative;
         }
 
-        .img-fluid {
-            position: absolute;
-            z-index: 0;
-            width:400px;
-        }
-
         .mission-button-text {
+            font-family: DomaineDispRegular;
             position: absolute;
             z-index: 1;
             left:-1px;
+            font-size:20px;
             margin-left:40px;
             margin-top:40px;
             background: none;
@@ -95,21 +63,18 @@
         }
 
         #our-vision {
-            top: 180px;
+            top: 80px;
+            left: -50px;
+            margin-left:50px;
         }
 
         #our-mission {
-            top: 250px;
+            top: 18px;
+            left: -50px;
+            margin-left:50px;
+
         }
 
-        @media screen and (max-width: 800px) {
-    .our-mission-col-xs-9 {
-        display: none;
-    }
-    .our-mission-col-xs-3 {
-        width: 100%;
-    }
-    .comment_one img {
-        width: 100%;
-    }
-}
+
+
+

@@ -1,28 +1,27 @@
-  {{ 'vision.scss' | asset_url | stylesheet_tag }}
+{{ 'vision.scss.css' | asset_url | stylesheet_tag }}
 
 <section class="shopify-section">
-    <div class="our-vision-container">
-        <div class="mission-content-row">
-            <div class="our-mission-col-xs-3">
-            <div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
 
-                <img class="img-fluid" src="{{section.settings.our_vision_image | img_url: '1920x'}}" alt="product-img" style='z-index: -1'>  
-                        <button class="mission-button-text" id="our-vision">
-                            
-                                Our Vision
-                           
-                        </button>
-                        <button class="mission-button-text active" id="our-mission">
+                <img class="img-fluid" src="{{section.settings.our_vision_image | img_url: 'master'}}" alt="product-img" style='z-index: -1'>  
+                          <button class="mission-button-text active" id="our-mission">
                            
                                 Our Mission
                            
                         </button>
+                        
+                        <button class="mission-button-text " id="our-vision">
+                            
+                                Our Vision
+                           
+                        </button>
+                      
                     
             </div>
 
-
-            </div>
-            <div class="our-mission-col-xs-9">
+            <div class="col-12 col-md-8">
 
                 <div class="mission-box" id="our-mission-category-box">
                         <p class="mission-content">We believe skincare should be simple, clean and effective. 
@@ -59,16 +58,14 @@
              para_two.classList.add("para-hidden")   
             }
 
+            our_vision.addEventListener("click", function(){  
+             change_visibility(our_vision, our_vision_category_box, our_mission, our_mission_category_box )
+              });
 
           
            our_mission.addEventListener("click", function(){ 
              change_visibility(our_mission, our_mission_category_box, our_vision, our_vision_category_box )
               });
-
-            
-           our_vision.addEventListener("click", function(){  
-             change_visibility(our_vision, our_vision_category_box, our_mission, our_mission_category_box )
-           });
 
 
         </script>  
