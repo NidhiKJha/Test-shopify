@@ -5,16 +5,17 @@
         <div class="mission-content-row">
             <div class="our-mission-col-xs-3">
             <div class="container">
+
                 <img class="img-fluid" src="{{section.settings.our_vision_image | img_url: '1920x'}}" alt="product-img" style='z-index: -1'>  
-                        <button class="hello-text" id="text-1">
-                            <h1>
+                        <button class="mission-button-text" id="our-vision">
+                            
                                 Our Vision
-                            </h1>
+                           
                         </button>
-                        <button class="hello-text" id="text-2">
-                            <h1>
-                                Our Mision
-                            </h1>
+                        <button class="mission-button-text active" id="our-mission">
+                           
+                                Our Mission
+                           
                         </button>
                     
             </div>
@@ -23,23 +24,56 @@
             </div>
             <div class="our-mission-col-xs-9">
 
-                <div class="our-mission-category-box">
+                <div class="mission-box" id="our-mission-category-box">
                         <p class="mission-content">We believe skincare should be simple, clean and effective. 
                         Over the years, formulations have become quite advanced, and in many ways that’s a positive thing.
                         But some fundamental methodologies have been lost in the process. We use ingredients that have been scientifically proven to work and left behind the toxic ones that can harm our skin, body and mind. 
                         Our mission is to create 100% pure, organic, vegan-based formulas that help us maintain beautiful skin and feel consciously good too.</p>
-                        <p class="mission-content"> What started with one product, 
-                        our Award-Winning Anti-Stretch Mark Cream #1 on Amazon’s new skincare product launches, has now grown into a more diverse line of skincare products.
-                        And we’re still growing and continuing to formulate new products thanks to you and your feedback. 
-                        And nope, we’re not mad scientists; we’re just two moms, one a board-certified dermatologist and the other a beauty industry veteran,
-                        who did a lot of research because we believe in women feeling beautiful inside and out. We love it, and we hope you do too!</p>
-                         <p class="mission-content">Love! </p>
+                        <p class="mission-content">Love! </p>
                         <p class="mission-content"> Dr. Mikhail and AnaLiza </p>
                 
                 </div>
+                <div class="mission-box para-hidden" id="our-vision-category-box">
+                            <p class="mission-content"> What started with one product, 
+                            our Award-Winning Anti-Stretch Mark Cream #1 on Amazon’s new skincare product launches, has now grown into a more diverse line of skincare products.
+                            And we’re still growing and continuing to formulate new products thanks to you and your feedback. 
+                            And nope, we’re not mad scientists; we’re just two moms, one a board-certified dermatologist and the other a beauty industry veteran,
+                            who did a lot of research because we believe in women feeling beautiful inside and out. We love it, and we hope you do too!</p>
+                            <p class="mission-content">Love! </p>
+                            <p class="mission-content"> Dr. Mikhail and AnaLiza </p>
+                
+                </div>
             </div>
-        </div>  
+        </div> 
+        <script>
+        
+            const our_mission = document.querySelector("#our-mission")
+            const our_vision = document.querySelector("#our-vision")
+            const our_vision_category_box = document.querySelector("#our-vision-category-box")
+            const our_mission_category_box = document.querySelector("#our-mission-category-box")
+
+            function change_visibility(button_one, para_one, button_two, para_two){
+             button_one.classList.add("active")
+             button_two.classList.remove("active")
+             para_one.classList.remove("para-hidden")
+             para_two.classList.add("para-hidden")   
+            }
+
+
+          
+           our_mission.addEventListener("click", function(){ 
+             change_visibility(our_mission, our_mission_category_box, our_vision, our_vision_category_box )
+              });
+
+            
+           our_vision.addEventListener("click", function(){  
+             change_visibility(our_vision, our_vision_category_box, our_mission, our_mission_category_box )
+           });
+
+
+        </script>  
     </div>
+
 </section>
 
 {% schema %}
